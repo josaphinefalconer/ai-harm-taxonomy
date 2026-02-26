@@ -8,7 +8,7 @@ A structured, behaviorally-grounded taxonomy of AI-enabled harms, designed to su
 
 The AI Harm Taxonomy Library classifies harms type, **severity**, **reversibility**, **observable behavioral warning indicators**. 
 
-The taxonomy covers **8 top-level harm categories** and **89 distinct harm types**, each documented with:
+The taxonomy covers **8 top-level harm categories** and **81 distinct harm types**, each documented with:
 
 - **Severity** — Critical / High / Medium
 - **Reversibility** — None / Low / Partial / High / Unknown
