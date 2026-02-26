@@ -64,16 +64,6 @@ This taxonomy was developed with reference to:
 
 ---
 
-## Repository Structure
-
-```
-ai-harm-taxonomy-library/
-├── README.md                        # This file
-├── data/
-│   └── ai-harm-taxonomy.json        # Full taxonomy in structured JSON
-└── docs/
-    └── METHODOLOGY.md               # Framework alignment and design rationale
-```
 
 ---
 
@@ -142,7 +132,7 @@ surveillance_harms = next(
 ## Intended Audiences
 
 - **AI Safety Researchers** — Reference framework for harm classification and behavioral threat modeling
-- **Policy Analysts** — Structured input for AI governance documentation and regulatory alignment
+- **Policy Analysts** — Input for AI governance documentation and regulatory alignment
 - **Trust & Safety Teams** — Operational signal library for detection rule development
 - **AI Developers** — Pre-deployment risk checklist aligned to major governance frameworks
 
