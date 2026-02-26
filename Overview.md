@@ -12,7 +12,7 @@ The taxonomy covers **8 top-level harm categories** and **81 distinct harm types
 
 - **Severity** — Critical / High / Medium
 - **Reversibility** — None / Low / Partial / High / Unknown
-- **Description** — Concise definition of the harm
+- **Description** — High-level definition of the harm
 - **Top 3 Warning Behaviors** — Observable online signals that the harm may be actively occurring
 
 ### Framework Alignment
