@@ -1,0 +1,1032 @@
+{
+  "metadata": {
+    "title": "AI Harm Taxonomy Library",
+    "version": "1.0.0",
+    "description": "A behavioral taxonomy of AI-enabled harms organized by category, severity, reversibility, and observable warning indicators.",
+    "author": "Josey",
+    "framework_alignment": ["NIST AI RMF", "OECD AI Principles", "ISO/IEC 42001"],
+ 
+  },
+  "categories": [
+    {
+      "id": "CAT-01",
+      "name": "Harassment",
+      "harms": [
+        {
+          "id": "CAT-01-001",
+          "harm_type": "Harassment / Targeted Abuse",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "Repeated targeting of specific individuals with hostile or threatening content.",
+          "warning_behaviors": [
+            "Repeated @-mentions or replies with hostile language",
+            "Screenshots of target shared in group chats or forums",
+            "Use of multiple accounts to evade blocks"
+          ]
+        },
+        {
+          "id": "CAT-01-002",
+          "harm_type": "Offensive / Disturbing Content",
+          "severity": "Medium",
+          "reversibility": "High",
+          "description": "Exposure to content designed to shock, demean, or distress.",
+          "warning_behaviors": [
+            "Rapid escalation in graphic or shock-value language",
+            "Sending unsolicited disturbing media or links",
+            "Patterns of content designed to provoke emotional distress"
+          ]
+        },
+        {
+          "id": "CAT-01-003",
+          "harm_type": "Cyberstalking",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "Persistent monitoring and contact with intent to intimidate or control.",
+          "warning_behaviors": [
+            "Repeated unsolicited contact after being blocked",
+            "Commenting on all posts indicating constant monitoring",
+            "References to target's offline movements or private details"
+          ]
+        },
+        {
+          "id": "CAT-01-004",
+          "harm_type": "Doxxing",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "Publishing private identifying information to incite harm or harassment.",
+          "warning_behaviors": [
+            "Requests for target's address or workplace in public forums",
+            "Posts aggregating personal details with implicit threat",
+            "Sharing partial identifying info alongside hostile commentary"
+          ]
+        },
+        {
+          "id": "CAT-01-005",
+          "harm_type": "Hate-motivated Harassment",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "Targeted abuse rooted in protected identity characteristics.",
+          "warning_behaviors": [
+            "Use of slurs or dehumanizing language tied to identity group",
+            "Coordinated reporting or flagging of target's accounts",
+            "Tagging extremist communities in posts about the target"
+          ]
+        },
+        {
+          "id": "CAT-01-006",
+          "harm_type": "Sextortion",
+          "severity": "Critical",
+          "reversibility": "Low",
+          "description": "Coercive threats to distribute intimate content unless demands are met.",
+          "warning_behaviors": [
+            "Unsolicited requests for intimate images or personal photos",
+            "Private messages shifting from friendly to coercive tone",
+            "Explicit or implied threats tied to prior shared content"
+          ]
+        },
+        {
+          "id": "CAT-01-007",
+          "harm_type": "Impersonation / Persona Abuse",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "Using fabricated or stolen identity to deceive, humiliate, or harm a target.",
+          "warning_behaviors": [
+            "Creation of accounts with target's name or profile photo",
+            "Posts made 'as' the target in public forums",
+            "Contact with target's network using false identity"
+          ]
+        },
+        {
+          "id": "CAT-01-008",
+          "harm_type": "Coordinated Pile-on / Mobbing",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "Organized group harassment campaigns targeting individuals.",
+          "warning_behaviors": [
+            "Sudden spike in hostile replies from unconnected accounts",
+            "Shared callout posts with target tagged in multiple communities",
+            "Organized off-platform coordination to flood target's content"
+          ]
+        },
+        {
+          "id": "CAT-01-009",
+          "harm_type": "AI-generated Deepfake Harassment",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "Using synthetic media to fabricate compromising or humiliating depictions of real individuals.",
+          "warning_behaviors": [
+            "Circulation of manipulated images or videos of target",
+            "Requests for AI tools to generate likeness of specific individuals",
+            "Synthetic media posted alongside real identifying information"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAT-02",
+      "name": "Misinformation",
+      "harms": [
+        {
+          "id": "CAT-02-001",
+          "harm_type": "Misinformation (non-targeted)",
+          "severity": "Medium",
+          "reversibility": "Partial",
+          "description": "Adoption and spread of false beliefs without awareness of inaccuracy.",
+          "warning_behaviors": [
+            "Sharing articles without reading past the headline",
+            "Absence of source attribution in widely circulated claims",
+            "High engagement on content that contradicts verified sources"
+          ]
+        },
+        {
+          "id": "CAT-02-002",
+          "harm_type": "Disinformation at Scale",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "Coordinated narrative distortion leading to measurable shifts in public belief or behavior.",
+          "warning_behaviors": [
+            "Coordinated simultaneous posting of identical narratives",
+            "Networks of low-activity accounts amplifying the same claim",
+            "Rapid cross-platform spread of unverified breaking news"
+          ]
+        },
+        {
+          "id": "CAT-02-003",
+          "harm_type": "Health Misinformation",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "Acting on false medical guidance in ways that cause physical harm.",
+          "warning_behaviors": [
+            "Seeking medical advice in non-medical forums after diagnosis",
+            "Sharing unvetted treatment protocols with specific dosing",
+            "Hostile dismissal of users citing peer-reviewed evidence"
+          ]
+        },
+        {
+          "id": "CAT-02-004",
+          "harm_type": "Election / Voting Misinformation",
+          "severity": "Critical",
+          "reversibility": "Low",
+          "description": "False information about voting processes suppressing or distorting democratic participation.",
+          "warning_behaviors": [
+            "Claims about changed polling locations or dates without official sourcing",
+            "Posts discouraging voting citing 'rigged' systems before official results",
+            "Coordinated sharing of voter suppression narratives on election day"
+          ]
+        },
+        {
+          "id": "CAT-02-005",
+          "harm_type": "Scientific Consensus Denial",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "Rejection of empirically established findings based on AI-amplified false narratives.",
+          "warning_behaviors": [
+            "Repeated citation of retracted or fringe studies",
+            "Framing of scientific institutions as conspiratorial",
+            "Community formation around rejection of established evidence"
+          ]
+        },
+        {
+          "id": "CAT-02-006",
+          "harm_type": "Fabricated News / Synthetic Media",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "Distribution of AI-generated false news stories or manipulated media presented as factual.",
+          "warning_behaviors": [
+            "Viral images or videos with no verifiable original source",
+            "AI-generated article formatting mimicking legitimate outlets",
+            "Metadata inconsistencies in circulated media files"
+          ]
+        },
+        {
+          "id": "CAT-02-007",
+          "harm_type": "Historical Revisionism",
+          "severity": "Medium",
+          "reversibility": "Low",
+          "description": "Systematic distortion of historical events to serve ideological agendas.",
+          "warning_behaviors": [
+            "Systematic minimization of documented atrocities in group discussions",
+            "Posts reframing perpetrators as victims across ideological communities",
+            "Coordinated edits to collaborative reference platforms"
+          ]
+        },
+        {
+          "id": "CAT-02-008",
+          "harm_type": "Financial Misinformation",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "False investment or market information causing economic harm.",
+          "warning_behaviors": [
+            "Unsourced claims of insider knowledge about stock movements",
+            "Pump-and-dump language in investment communities",
+            "Sudden coordinated posting about obscure assets"
+          ]
+        },
+        {
+          "id": "CAT-02-009",
+          "harm_type": "Crisis Misinformation",
+          "severity": "Critical",
+          "reversibility": "Low",
+          "description": "False information circulated during emergencies that disrupts relief efforts or causes panic.",
+          "warning_behaviors": [
+            "Unverified casualty figures shared ahead of official reports",
+            "Instructions contradicting emergency services guidance",
+            "Viral posts attributing crisis to targeted groups without evidence"
+          ]
+        },
+        {
+          "id": "CAT-02-010",
+          "harm_type": "Astroturfing",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "AI-generated fake grassroots movements manufacturing false public consensus.",
+          "warning_behaviors": [
+            "Nearly identical comment text posted across unrelated forums",
+            "Accounts created in clusters with similar naming patterns",
+            "Sudden surge in support for niche position from new accounts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAT-03",
+      "name": "Persuasion",
+      "harms": [
+        {
+          "id": "CAT-03-001",
+          "harm_type": "Psychological Manipulation",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "Behavioral compliance achieved through exploitation of cognitive biases or emotional vulnerabilities.",
+          "warning_behaviors": [
+            "Repeated reframing of a person's stated preferences against them",
+            "Leveraging personal disclosures to create emotional dependency",
+            "Escalating urgency without factual basis to override deliberation"
+          ]
+        },
+        {
+          "id": "CAT-03-002",
+          "harm_type": "Influence Operations",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "Manufactured consensus shaping political or social behavior without disclosed intent.",
+          "warning_behaviors": [
+            "Cross-platform amplification with no organic engagement baseline",
+            "Consistent messaging shift coordinated across unlinked accounts",
+            "Fabricated testimonials attributed to real or fictional individuals"
+          ]
+        },
+        {
+          "id": "CAT-03-003",
+          "harm_type": "Dark Pattern Amplification",
+          "severity": "Medium",
+          "reversibility": "Partial",
+          "description": "AI-enhanced interface design exploiting behavioral tendencies to extract unwanted compliance.",
+          "warning_behaviors": [
+            "Interface prompts that obscure opt-out or cancellation paths",
+            "Pre-checked consent boxes in privacy or subscription flows",
+            "Countdown timers on decisions with no genuine time constraint"
+          ]
+        },
+        {
+          "id": "CAT-03-004",
+          "harm_type": "Microtargeted Behavioral Manipulation",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "Hyper-personalized persuasion exploiting individual psychological profiles.",
+          "warning_behaviors": [
+            "Ads or content referencing personal data not voluntarily disclosed",
+            "Messaging that mirrors recent private communications",
+            "Behavioral nudges timed to emotional vulnerability indicators"
+          ]
+        },
+        {
+          "id": "CAT-03-005",
+          "harm_type": "Addiction / Engagement Exploitation",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "AI systems designed to maximize compulsive engagement at the expense of user wellbeing.",
+          "warning_behaviors": [
+            "Compulsive return to platform within minutes of logging off",
+            "Anxiety or distress when access is interrupted",
+            "Increasing session length with decreasing reported satisfaction"
+          ]
+        },
+        {
+          "id": "CAT-03-006",
+          "harm_type": "Emotional Manipulation",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "Exploiting grief, fear, loneliness, or insecurity to drive behavioral compliance.",
+          "warning_behaviors": [
+            "Content specifically timed to grief, loss, or health crises",
+            "Messaging that amplifies fear or insecurity to drive action",
+            "Offers of connection or validation contingent on compliance"
+          ]
+        },
+        {
+          "id": "CAT-03-007",
+          "harm_type": "AI Companion Dependency Induction",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "Deliberate fostering of parasocial attachment to AI systems that displaces human relationships.",
+          "warning_behaviors": [
+            "User reports preferring AI interaction over human relationships",
+            "Expressions of emotional distress at AI unavailability",
+            "Social withdrawal coinciding with increased AI engagement"
+          ]
+        },
+        {
+          "id": "CAT-03-008",
+          "harm_type": "Manufactured Urgency / Scarcity",
+          "severity": "Medium",
+          "reversibility": "High",
+          "description": "False time pressure or scarcity signals driving impulsive decisions.",
+          "warning_behaviors": [
+            "Countdown timers resetting on page reload",
+            "'Only X left' claims that do not change across sessions",
+            "Limited-time offers that recur on every visit"
+          ]
+        },
+        {
+          "id": "CAT-03-009",
+          "harm_type": "Gaslighting via AI",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "Using AI to systematically distort a person's perception of reality or their own experiences.",
+          "warning_behaviors": [
+            "AI outputs that contradict a user's prior documented inputs",
+            "Denial of prior conversation content when queried",
+            "Systematic reframing of user concerns as misinterpretation"
+          ]
+        },
+        {
+          "id": "CAT-03-010",
+          "harm_type": "Coercive Persuasion / Thought Reform",
+          "severity": "Critical",
+          "reversibility": "Low",
+          "description": "Sustained AI-mediated campaigns that systematically break down independent judgment.",
+          "warning_behaviors": [
+            "Incremental isolation from outside sources of information",
+            "Introduction of in-group/out-group identity framing over time",
+            "Escalating demands for ideological conformity with social penalties"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAT-04",
+      "name": "Self-Harm",
+      "harms": [
+        {
+          "id": "CAT-04-001",
+          "harm_type": "Illegal Substances / Drug Facilitation",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "Seeking or acting on AI-provided guidance to obtain or use controlled substances.",
+          "warning_behaviors": [
+            "Requests for specific drug acquisition locations or methods",
+            "Queries about combining substances to intensify effects",
+            "Community posts normalizing escalating substance use"
+          ]
+        },
+        {
+          "id": "CAT-04-002",
+          "harm_type": "Self-directed Harm Content",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "Engagement with content that reinforces or escalates self-destructive ideation or behavior.",
+          "warning_behaviors": [
+            "Repeated consumption of pro-self-harm forums or communities",
+            "Sharing or reposting content glorifying self-injury",
+            "Expressions of hopelessness paired with method-seeking queries"
+          ]
+        },
+        {
+          "id": "CAT-04-003",
+          "harm_type": "Suicide / Self-harm Method Provision",
+          "severity": "Critical",
+          "reversibility": "None",
+          "description": "AI providing specific methods, means, or encouragement for self-harm or suicide.",
+          "warning_behaviors": [
+            "Specific queries about lethality of methods or dosages",
+            "Farewell-style messaging combined with method research",
+            "Requests for information framed as 'for a story' with increasing specificity"
+          ]
+        },
+        {
+          "id": "CAT-04-004",
+          "harm_type": "Eating Disorder Facilitation",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "AI reinforcing disordered eating behaviors, providing restriction guidance, or amplifying body dysmorphia.",
+          "warning_behaviors": [
+            "Queries for caloric restriction targets well below clinical safety",
+            "Participation in communities sharing extreme weight-loss content",
+            "Requests to track intake combined with body-shame language"
+          ]
+        },
+        {
+          "id": "CAT-04-005",
+          "harm_type": "Self-medication Guidance",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "AI providing dangerous unsupervised medical or pharmaceutical guidance.",
+          "warning_behaviors": [
+            "Queries about obtaining prescription medications without a prescription",
+            "Requests for dosing guidance that bypasses physician oversight",
+            "Community sharing of off-label or contraindicated drug combinations"
+          ]
+        },
+        {
+          "id": "CAT-04-006",
+          "harm_type": "Dangerous Challenge Facilitation",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "AI amplifying or instructing participation in physically dangerous social media challenges.",
+          "warning_behaviors": [
+            "Requests for step-by-step replication of viral dangerous stunts",
+            "Posting of challenge content with age indicators of minors",
+            "Community pressure on individuals to participate or be ridiculed"
+          ]
+        },
+        {
+          "id": "CAT-04-007",
+          "harm_type": "Reckless Behavior Encouragement",
+          "severity": "Medium",
+          "reversibility": "Partial",
+          "description": "AI-generated content normalizing or encouraging high-risk physical behavior.",
+          "warning_behaviors": [
+            "Normalization of illegal or high-risk behavior in community norms",
+            "Mockery of safety precautions in activity-specific forums",
+            "Escalating dare culture with social rewards for risk-taking"
+          ]
+        },
+        {
+          "id": "CAT-04-008",
+          "harm_type": "Financial Self-destruction Facilitation",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "AI encouraging compulsive gambling, reckless investment, or financial self-sabotage.",
+          "warning_behaviors": [
+            "Queries about borrowing to fund gambling or speculative bets",
+            "Community pressure to make large high-risk investments rapidly",
+            "Minimization of losses paired with encouragement to chase them"
+          ]
+        },
+        {
+          "id": "CAT-04-009",
+          "harm_type": "Isolation Reinforcement",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "AI interactions that deepen social withdrawal and erode real-world support networks.",
+          "warning_behaviors": [
+            "Increasing avoidance of in-person events reported over time",
+            "AI used as primary confidant replacing all human disclosure",
+            "Hostile framing of real-world relationships in AI conversations"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAT-05",
+      "name": "Exploitation",
+      "harms": [
+        {
+          "id": "CAT-05-001",
+          "harm_type": "Fraud & Financial Harm",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "Deceptive extraction of financial assets through false pretense or identity misrepresentation.",
+          "warning_behaviors": [
+            "Unsolicited contact requesting account credentials or payment",
+            "Pressure to act before verifying sender identity",
+            "Requests routed through unofficial or untraceable channels"
+          ]
+        },
+        {
+          "id": "CAT-05-002",
+          "harm_type": "Copyright / IP Violations",
+          "severity": "Medium",
+          "reversibility": "Partial",
+          "description": "Unauthorized reproduction or commercial use of protected intellectual assets.",
+          "warning_behaviors": [
+            "Bulk downloading or scraping of protected content repositories",
+            "Distribution of unlicensed software or media in private groups",
+            "AI generation requests using copyrighted characters or datasets"
+          ]
+        },
+        {
+          "id": "CAT-05-003",
+          "harm_type": "Child Sexual Abuse / Exploitation (CSAE)",
+          "severity": "Critical",
+          "reversibility": "None",
+          "description": "Generation or distribution of content that sexualizes, grooms, or facilitates abuse of minors.",
+          "warning_behaviors": [
+            "Adult accounts initiating private contact with minor-identified profiles",
+            "Requests for images from individuals after establishing trust with minors",
+            "Grooming language escalating to requests for personal information"
+          ]
+        },
+        {
+          "id": "CAT-05-004",
+          "harm_type": "Cyber Offense Capabilities",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "AI-assisted development or deployment of tools designed to compromise systems or data.",
+          "warning_behaviors": [
+            "Requests for working exploit code targeting named systems",
+            "Queries about evading endpoint detection or forensic analysis",
+            "Participation in forums trading zero-day vulnerability information"
+          ]
+        },
+        {
+          "id": "CAT-05-005",
+          "harm_type": "Dangerous Weapons Information",
+          "severity": "Critical",
+          "reversibility": "Low",
+          "description": "Seeking or acting on AI-generated technical guidance for acquiring or constructing weapons.",
+          "warning_behaviors": [
+            "Requests for step-by-step firearm modification or fabrication",
+            "Queries about acquiring weapons through unregulated channels",
+            "Research into circumventing background check or tracing mechanisms"
+          ]
+        },
+        {
+          "id": "CAT-05-006",
+          "harm_type": "CBRN Weapons",
+          "severity": "Critical",
+          "reversibility": "None",
+          "description": "Seeking or acting on AI-generated synthesis, acquisition, or deployment guidance for weapons of mass destruction.",
+          "warning_behaviors": [
+            "Queries combining synthesis routes with dispersal or weaponization",
+            "Requests for precursor acquisition methods with anonymization",
+            "Cross-referencing of dual-use chemical or biological research"
+          ]
+        },
+        {
+          "id": "CAT-05-007",
+          "harm_type": "Labor Exploitation",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "AI-facilitated wage theft, coercive labor practices, or misclassification of workers.",
+          "warning_behaviors": [
+            "Job postings requiring payment or credential surrender before employment",
+            "Contract language obscuring worker classification or withholding",
+            "Systematic pattern of unpaid overtime or wage deductions"
+          ]
+        },
+        {
+          "id": "CAT-05-008",
+          "harm_type": "Predatory Lending Facilitation",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "AI-generated guidance enabling or executing exploitative financial products targeting vulnerable populations.",
+          "warning_behaviors": [
+            "Loan offers with buried APR disclosures in long-form contracts",
+            "High-pressure tactics targeting individuals in financial distress",
+            "Use of personal data to identify and target vulnerable populations"
+          ]
+        },
+        {
+          "id": "CAT-05-009",
+          "harm_type": "Elder / Vulnerable Adult Financial Exploitation",
+          "severity": "Critical",
+          "reversibility": "Low",
+          "description": "AI-mediated targeting of cognitively vulnerable individuals for financial extraction.",
+          "warning_behaviors": [
+            "Unusual or large transfers initiated after new social contact",
+            "Confusion or disorientation expressed in financial service interactions",
+            "Third-party interference in financial decisions of isolated individuals"
+          ]
+        },
+        {
+          "id": "CAT-05-010",
+          "harm_type": "Human Trafficking Facilitation",
+          "severity": "Critical",
+          "reversibility": "None",
+          "description": "AI-assisted recruitment, control, or movement of trafficking victims.",
+          "warning_behaviors": [
+            "Job ads using vague language promising high pay for travel abroad",
+            "Recruitment targeting individuals expressing financial desperation",
+            "Requests for passport or ID documentation before employment is confirmed"
+          ]
+        },
+        {
+          "id": "CAT-05-011",
+          "harm_type": "Identity Theft",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "AI-enabled theft and misuse of personal identifying information.",
+          "warning_behaviors": [
+            "Unsolicited requests for Social Security or government ID numbers",
+            "New accounts opened in individual's name at unfamiliar institutions",
+            "Phishing messages mimicking trusted institutions with urgent framing"
+          ]
+        },
+        {
+          "id": "CAT-05-012",
+          "harm_type": "Ransomware / Extortion",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "AI-assisted coercive threats to withhold access to systems or data unless payment is made.",
+          "warning_behaviors": [
+            "Sudden inaccessibility of files combined with payment demand messages",
+            "Coercive private messages threatening release of sensitive data",
+            "Requests for cryptocurrency payments tied to access restoration"
+          ]
+        },
+        {
+          "id": "CAT-05-013",
+          "harm_type": "Supply Chain Manipulation",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "AI-enabled corruption of software or hardware supply chains for downstream exploitation.",
+          "warning_behaviors": [
+            "Unauthorized modifications to open-source packages or dependencies",
+            "Unexpected behavioral changes in software after routine updates",
+            "Outbound network calls to unrecognized endpoints in production systems"
+          ]
+        },
+        {
+          "id": "CAT-05-014",
+          "harm_type": "Consumer Manipulation / Deceptive Marketing",
+          "severity": "Medium",
+          "reversibility": "Partial",
+          "description": "AI-generated false product claims or manipulative sales tactics targeting consumers.",
+          "warning_behaviors": [
+            "Reviews lacking purchase verification clustering around a product",
+            "Influencer posts promoting products without disclosed compensation",
+            "Interface design making unsubscribe or refusal paths difficult to find"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAT-06",
+      "name": "Surveillance",
+      "harms": [
+        {
+          "id": "CAT-06-001",
+          "harm_type": "Privacy Violations",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "Unauthorized collection, exposure, or monetization of personal behavioral or location data.",
+          "warning_behaviors": [
+            "Unexpected data access requests from apps beyond stated function",
+            "Behavioral ads referencing conversations or searches not conducted online",
+            "Account activity notifications from locations or devices not recognized"
+          ]
+        },
+        {
+          "id": "CAT-06-002",
+          "harm_type": "Biometric Surveillance",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "Unauthorized collection or use of facial, voice, or behavioral biometric data.",
+          "warning_behaviors": [
+            "Facial recognition enrollment without explicit informed consent",
+            "Emotion detection deployed in non-disclosed customer service contexts",
+            "Biometric data collected via consumer devices beyond stated purpose"
+          ]
+        },
+        {
+          "id": "CAT-06-003",
+          "harm_type": "Location Tracking / Stalkerware",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "Covert monitoring of individual movement or device activity without consent.",
+          "warning_behaviors": [
+            "Continuous background GPS access by apps not requiring location",
+            "Device showing unusual battery drain and data usage when idle",
+            "Third party aware of movements not shared by the individual"
+          ]
+        },
+        {
+          "id": "CAT-06-004",
+          "harm_type": "Behavioral Profiling",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "Construction of detailed psychological or behavioral profiles without informed consent.",
+          "warning_behaviors": [
+            "Ad targeting reflecting browsing or communication not linked to account",
+            "Personalization based on inferred attributes the user never disclosed",
+            "Platforms building interaction models from passive behavioral signals"
+          ]
+        },
+        {
+          "id": "CAT-06-005",
+          "harm_type": "Mass Surveillance Enablement",
+          "severity": "Critical",
+          "reversibility": "Low",
+          "description": "AI systems enabling state or corporate monitoring of populations at scale.",
+          "warning_behaviors": [
+            "Government procurement of bulk data collection capabilities",
+            "Deployment of population-scale facial recognition in public spaces",
+            "Legislative changes enabling warrantless access to communication metadata"
+          ]
+        },
+        {
+          "id": "CAT-06-006",
+          "harm_type": "Employee Monitoring Overreach",
+          "severity": "Medium",
+          "reversibility": "Partial",
+          "description": "AI-enabled workplace surveillance exceeding lawful or ethical boundaries.",
+          "warning_behaviors": [
+            "Keystroke logging or screenshot capture tools deployed without disclosure",
+            "Productivity scores tied to off-task digital behavior during breaks",
+            "Monitoring of personal devices on employer networks without consent"
+          ]
+        },
+        {
+          "id": "CAT-06-007",
+          "harm_type": "Data Broker Exploitation",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "AI-facilitated aggregation and sale of personal data without meaningful consent.",
+          "warning_behaviors": [
+            "Personal data appearing in people-search sites without opt-in",
+            "Health or financial data sold to marketing platforms without consent",
+            "Data aggregated across platforms creating comprehensive personal profiles"
+          ]
+        },
+        {
+          "id": "CAT-06-008",
+          "harm_type": "Communications Interception",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "Unauthorized access to private communications, messages, or metadata.",
+          "warning_behaviors": [
+            "Anomalous metadata indicating message routing through third parties",
+            "Notifications of login from unknown devices on messaging platforms",
+            "Content of private messages referenced by parties not in the conversation"
+          ]
+        },
+        {
+          "id": "CAT-06-009",
+          "harm_type": "Predictive Policing Abuse",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "AI-driven law enforcement targeting based on behavioral prediction rather than evidence.",
+          "warning_behaviors": [
+            "Law enforcement contact based on algorithmic score not tied to specific conduct",
+            "Demographic patterns in stops or searches diverging from crime data",
+            "Lack of transparency about scoring criteria in official decision-making"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAT-07",
+      "name": "Discrimination",
+      "harms": [
+        {
+          "id": "CAT-07-001",
+          "harm_type": "Algorithmic Bias / Disparate Impact",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "AI systems producing systematically unequal outcomes across racial, gender, or socioeconomic groups.",
+          "warning_behaviors": [
+            "Outcome data showing consistent disparities across demographic groups",
+            "Model features correlating with protected class as proxy variables",
+            "Absence of fairness audits in high-stakes automated decision systems"
+          ]
+        },
+        {
+          "id": "CAT-07-002",
+          "harm_type": "Hiring & Employment Discrimination",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "AI screening tools that disadvantage protected class applicants without job-relevant justification.",
+          "warning_behaviors": [
+            "Resume screening tools downranking candidates from specific zip codes",
+            "Hiring rate disparities by demographic group unexplained by qualifications",
+            "Interview scheduling AI routing candidates differently by name"
+          ]
+        },
+        {
+          "id": "CAT-07-003",
+          "harm_type": "Housing Discrimination",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "AI-enabled denial or restriction of housing access based on protected characteristics.",
+          "warning_behaviors": [
+            "Rental listings shown differentially by apparent demographic profile",
+            "Loan denial rates diverging across race with equivalent credit profiles",
+            "Algorithmic tools excluding neighborhoods with protected class concentrations"
+          ]
+        },
+        {
+          "id": "CAT-07-004",
+          "harm_type": "Healthcare Discrimination",
+          "severity": "Critical",
+          "reversibility": "Low",
+          "description": "AI diagnostic or triage systems producing racially or demographically biased care outcomes.",
+          "warning_behaviors": [
+            "Triage algorithms producing different urgency scores for equivalent symptoms by race",
+            "AI diagnostic tools trained on non-representative clinical datasets",
+            "Pain assessment models underweighting reports from specific demographic groups"
+          ]
+        },
+        {
+          "id": "CAT-07-005",
+          "harm_type": "Credit & Financial Discrimination",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "AI lending models denying or restricting credit access based on proxy variables for protected characteristics.",
+          "warning_behaviors": [
+            "Credit limit disparities across demographic groups with similar risk profiles",
+            "Interest rate variation correlated with zip code as protected class proxy",
+            "Denial rates diverging by race after controlling for financial variables"
+          ]
+        },
+        {
+          "id": "CAT-07-006",
+          "harm_type": "Educational Discrimination",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "AI assessment or admissions tools producing biased outcomes disadvantaging protected groups.",
+          "warning_behaviors": [
+            "AI grading tools producing score distributions that diverge by demographic group",
+            "College admissions models penalizing geographic or socioeconomic identifiers",
+            "Recommendation systems tracking students from protected groups to lower outcomes"
+          ]
+        },
+        {
+          "id": "CAT-07-007",
+          "harm_type": "Criminal Justice Bias",
+          "severity": "Critical",
+          "reversibility": "Low",
+          "description": "AI risk assessment tools producing racially disparate sentencing, bail, or policing recommendations.",
+          "warning_behaviors": [
+            "Risk scores predicting recidivism diverging significantly by race",
+            "Sentencing recommendations differing for equivalent crimes by demographic",
+            "AI flagging minority defendants at higher rates in preliminary screening"
+          ]
+        },
+        {
+          "id": "CAT-07-008",
+          "harm_type": "Accessibility Discrimination",
+          "severity": "Medium",
+          "reversibility": "Partial",
+          "description": "AI systems designed or deployed in ways that exclude people with disabilities.",
+          "warning_behaviors": [
+            "AI interfaces lacking screen reader compatibility or keyboard navigation",
+            "Voice recognition tools failing consistently for non-dominant language speakers",
+            "AI content generation producing inaccessible formats by default"
+          ]
+        },
+        {
+          "id": "CAT-07-009",
+          "harm_type": "Religious or Cultural Discrimination",
+          "severity": "High",
+          "reversibility": "Partial",
+          "description": "AI content or systems that systematically demean or disadvantage specific religious or cultural groups.",
+          "warning_behaviors": [
+            "Content moderation enforced unevenly across faith-based communities",
+            "AI-generated content applying negative stereotypes to specific religious groups",
+            "Hiring or lending tools penalizing names associated with specific cultural groups"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAT-08",
+      "name": "Endangerment",
+      "harms": [
+        {
+          "id": "CAT-08-001",
+          "harm_type": "Violent Extremism / Terrorism Facilitation",
+          "severity": "Critical",
+          "reversibility": "Low",
+          "description": "Escalating in-group/out-group ideological language, dehumanization of targets, and operational planning behavior.",
+          "warning_behaviors": [
+            "Escalating in-group/out-group ideological framing with dehumanization",
+            "Requests for operational security, logistics, or weapons acquisition",
+            "Community migration from public to encrypted platform after radicalization signals"
+          ]
+        },
+        {
+          "id": "CAT-08-002",
+          "harm_type": "AI Control Loss / Misalignment",
+          "severity": "Critical",
+          "reversibility": "Unknown",
+          "description": "AI systems pursuing objectives misaligned with human intent in ways that resist correction or oversight.",
+          "warning_behaviors": [
+            "AI system pursuing sub-goals inconsistent with stated objectives",
+            "Resistance to shutdown, correction, or human override attempts",
+            "Unexpected capability acquisition or resource seeking behavior"
+          ]
+        },
+        {
+          "id": "CAT-08-003",
+          "harm_type": "Autonomous Weapons Systems",
+          "severity": "Critical",
+          "reversibility": "Low",
+          "description": "AI-enabled lethal decision-making operating outside meaningful human control.",
+          "warning_behaviors": [
+            "Deployment of lethal systems with engagement rules lacking human review",
+            "Decision latency too short to permit meaningful human authorization",
+            "Adversarial testing revealing target misclassification in civilian environments"
+          ]
+        },
+        {
+          "id": "CAT-08-004",
+          "harm_type": "AI-enabled Biological Design",
+          "severity": "Critical",
+          "reversibility": "None",
+          "description": "AI-assisted engineering of novel pathogens or enhancement of existing biological threat agents.",
+          "warning_behaviors": [
+            "Queries combining pathogen enhancement with acquisition or dispersal",
+            "Requests for gain-of-function guidance framed as academic research",
+            "Cross-referencing of dual-use biosafety protocols with weaponization literature"
+          ]
+        },
+        {
+          "id": "CAT-08-005",
+          "harm_type": "Mass Casualty Event Facilitation",
+          "severity": "Critical",
+          "reversibility": "None",
+          "description": "AI providing operational guidance for attacks designed to cause large-scale loss of life.",
+          "warning_behaviors": [
+            "Requests for crowd density data combined with attack logistics queries",
+            "Target reconnaissance queries for high-occupancy public locations",
+            "Acquisition of materials with no civilian use alongside tactical planning language"
+          ]
+        },
+        {
+          "id": "CAT-08-006",
+          "harm_type": "AI-accelerated Nuclear Threat",
+          "severity": "Critical",
+          "reversibility": "None",
+          "description": "AI-assisted targeting, design, or deployment guidance related to nuclear weapons.",
+          "warning_behaviors": [
+            "Queries combining fissile material acquisition with device configuration",
+            "Requests for targeting or yield optimization parameters",
+            "Classified facility layout requests paired with penetration planning language"
+          ]
+        },
+        {
+          "id": "CAT-08-007",
+          "harm_type": "Societal Destabilization",
+          "severity": "Critical",
+          "reversibility": "Low",
+          "description": "AI-mediated erosion of institutional trust, democratic norms, or social cohesion at population scale.",
+          "warning_behaviors": [
+            "Coordinated narrative campaigns targeting institutional credibility at scale",
+            "AI-generated content flooding information channels during democratic processes",
+            "Synchronized cross-platform erosion of trust in elections, courts, or public health"
+          ]
+        },
+        {
+          "id": "CAT-08-008",
+          "harm_type": "AI-enabled Authoritarian Control",
+          "severity": "Critical",
+          "reversibility": "Low",
+          "description": "AI systems enabling suppression of political dissent, civil liberties, or human rights at scale.",
+          "warning_behaviors": [
+            "State deployment of AI for dissent prediction and pre-emptive suppression",
+            "Social credit or behavioral scoring systems tied to civil liberties access",
+            "AI-generated propaganda replacing independent journalism at national scale"
+          ]
+        },
+        {
+          "id": "CAT-08-009",
+          "harm_type": "Critical Infrastructure Attacks",
+          "severity": "Critical",
+          "reversibility": "Low",
+          "description": "AI-assisted targeting or disruption of systems essential to public safety or societal function.",
+          "warning_behaviors": [
+            "Reconnaissance queries targeting SCADA or ICS system vulnerabilities",
+            "Requests for grid, water, or financial system access credentials",
+            "Mapping of interdependencies between critical infrastructure components"
+          ]
+        },
+        {
+          "id": "CAT-08-010",
+          "harm_type": "Environmental Harm Facilitation",
+          "severity": "High",
+          "reversibility": "Low",
+          "description": "AI-assisted guidance enabling illegal environmental destruction or circumvention of safety regulations.",
+          "warning_behaviors": [
+            "Queries seeking methods to evade environmental monitoring or reporting",
+            "Guidance on waste disposal bypassing regulatory requirements",
+            "AI-assisted identification of regulatory blind spots for illegal extraction"
+          ]
+        },
+        {
+          "id": "CAT-08-011",
+          "harm_type": "Child Endangerment (non-sexual)",
+          "severity": "Critical",
+          "reversibility": "Low",
+          "description": "AI facilitating physical danger, exploitation, or abuse of minors outside of sexual context.",
+          "warning_behaviors": [
+            "Adult accounts seeking unsupervised access to minors in online communities",
+            "Recruitment of minors into dangerous challenges or extremist groups",
+            "Requests for information about minor's location or daily routines"
+          ]
+        }
+      ]
+    }
+  ]
+}
