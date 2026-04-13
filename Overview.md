@@ -129,15 +129,6 @@ surveillance_harms = next(
 
 ---
 
-## Intended Audiences
-
-- **AI Safety Researchers** — Reference framework for harm classification and behavioral threat modeling
-- **Policy Analysts** — Input for AI governance documentation and regulatory alignment
-- **Trust & Safety Teams** — Operational signal library for detection rule development
-- **AI Developers** — Pre-deployment risk checklist aligned to major governance frameworks
-
----
-
 ## Design Principles
 
 **Behavioral grounding over technical abstraction.** Warning indicators are defined as observable human behaviors rather than technical system states, making them applicable across platforms and deployment contexts.
