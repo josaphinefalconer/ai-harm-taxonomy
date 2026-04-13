@@ -1,6 +1,6 @@
 # AI Harm Taxonomy Library
 
-A structured, behaviorally-grounded taxonomy of AI-enabled harms, designed to support AI safety research, policy development, platform trust & safety operations, and governance framework alignment.
+A structured, behaviorally-grounded taxonomy of AI-enabled harms, designed to explore human impact and support AI safety. 
 
 ---
 
