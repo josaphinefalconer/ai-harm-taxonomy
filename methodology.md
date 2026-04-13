@@ -93,9 +93,5 @@ Each harm type has exactly 3 warning behaviors to enforce prioritization discipl
 
 - **Static snapshot**: AI harm patterns evolve rapidly. This taxonomy represents a point-in-time assessment and should be reviewed periodically.
 - **Western-centric framing**: Some harm categories and warning behaviors reflect regulatory and cultural contexts primarily from North America and Europe.
-- **No quantitative thresholds**: Warning behaviors are qualitative indicators (as of now). Unique I.D. mapping to capture, track, and predict harms for upstream data collection is a project I am currently working on and very interested in. 
 - **Emergent harms not fully captured**: Novel harm types arising from new AI capabilities may not fit cleanly into existing categories.
 
----
-
-*For questions about methodology or framework alignment, open an issue in this repository.*
